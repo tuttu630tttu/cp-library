@@ -1,0 +1,118 @@
+{
+  "cp-library: template": {
+    "scope": "cpp",
+    "prefix": "kyopro",
+    "body": [
+      "#include<bits/stdc++.h>",
+      "// #include<atcoder/all>",
+      "// using namespace atcoder;",
+      "using namespace std;",
+      "struct Init { Init() { ios::sync_with_stdio(0); cin.tie(0); cout << setprecision(13); } }init;",
+      "using ll = long long;",
+      "using pll = pair<ll, ll>;",
+      "using Field = vector<string>;",
+      "template<typename T> using Board = vector<vector<T>>;",
+      "using Graph = vector<vector<int>>;",
+      "template<typename T> using min_pq = priority_queue<T, vector<T>, greater<T>>;",
+      "const int inf = 1073741823;",
+      "const long long INF = 1LL << 60;",
+      "const int MOD1 = 1000000007; // 計算するたびにこまめに %MOD する.",
+      "const int MOD9 = 998244353; // ↑最後にも %MOD をする",
+      "const int SIGMA = 26;",
+      "#define el '\\\\n'",
+      "#define spa \" \"",
+      "#define pb emplace_back",
+      "#define rep(i, s, n) for(int i = (s); i < (int)(n); i++)",
+      "#define rrep(i, s, n) for(int i = (int)(n) - 1; i >= (s); i--)",
+      "#define Yes cout << \"Yes\" << el",
+      "#define No cout << \"No\" << el",
+      "#define all(v) v.begin(), v.end()",
+      "#define rall(v) v.rbegin(), v.rend()",
+      "#define unless(c) if(!(c))",
+      "#define until(c) while(!(c))",
+      "#define idx(i, j) ((i) * w + (j)) // 横幅の変数名は w であることが前提.",
+      "template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }",
+      "template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }",
+      "",
+      "int sub(){",
+      "    return 0;",
+      "}",
+      "",
+      "int solve(){",
+      "    $0",
+      "    return 0;",
+      "}",
+      "",
+      "int main(){",
+      "    int t = 1;",
+      "    // cin >> t;",
+      "    rep(i, 0, t){",
+      "        solve();",
+      "    }",
+      "    return 0;",
+      "}"
+    ],
+    "description": "競プロ用の儀式テンプレート"
+  },
+  "cp-library: digits": {
+    "scope": "cpp",
+    "prefix": "digits",
+    "body": [
+      "vector<int> digits(ll n){",
+      "  if(n == 0) return {0};",
+      "  vector<int> res;",
+      "  while (n > 0){",
+      "    res.pb(n%10);",
+      "    n /= 10;",
+      "  }",
+      "  reverse(all(res));",
+      "  return res;",
+      "}"
+    ],
+    "description": "非負整数を桁の配列に変換。儀式テンプレートが必要"
+  },
+  "cp-library: grid4": {
+    "scope": "cpp",
+    "prefix": "dxdy4",
+    "body": [
+      "const int dy[4] = {-1,0,1,0};",
+      "const int dx[4] = {0,1,0,-1};"
+    ],
+    "description": "4方向のdy/dx。grid8と併用しない"
+  },
+  "cp-library: grid8": {
+    "scope": "cpp",
+    "prefix": "dxdy8",
+    "body": [
+      "const int dy[8] = {-1,-1,-1,0,1,1,1,0};",
+      "const int dx[8] = {-1,0,1,1,1,0,-1,-1};"
+    ],
+    "description": "8方向のdy/dx。grid4と併用しない"
+  },
+  "cp-library: outof": {
+    "scope": "cpp",
+    "prefix": "outof",
+    "body": [
+      "auto outof = [&](ll ii, ll jj) -> bool {",
+      "    return ii < 0 or h <= ii or jj < 0 or w <= jj;",
+      "};"
+    ],
+    "description": "solve内の範囲外判定。h, wとllが必要。引数は行、列"
+  },
+  "cp-library: rnum": {
+    "scope": "cpp",
+    "prefix": "rnum",
+    "body": [
+      "ll rnum(ll n){",
+      "  if(n == 0) return 0;",
+      "  ll res = 0;",
+      "  while (n > 0){",
+      "    res = res*10 + (n%10);",
+      "    n /= 10;",
+      "  }",
+      "  return res;",
+      "}"
+    ],
+    "description": "非負整数の桁を反転。結果がlong longに収まること。llが必要"
+  }
+}
